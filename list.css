@@ -1,0 +1,38 @@
+
+.outer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.categories{
+    font-style:bold;
+    margin-bottom: 20px;
+    font-weight: 500;
+   
+}
+
+.sub-Categories{
+    font-style: italic;
+    color: coral;
+  
+}
+
+.sub-Categories:hover{
+    color: blueviolet;
+}
+
+ul{
+   
+    list-style: circle;
+    
+   
+}
+
+
+
+li{
+   margin-top: 5px;
+}
+
+

@@ -1,0 +1,36 @@
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: 5%;
+ }   
+
+td, th {
+font-family: 'Roboto', sans-serif;
+border: 2px solid #dddddd;
+text-align: center;
+padding: 8px;
+}
+
+th{
+    color: blueviolet;
+}
+
+
+img{
+    opacity: 0.6;
+    width:150px;
+    height: 100px;
+    }
+
+
+
+img:hover{
+    opacity: 1;
+}
+
+h1,h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
