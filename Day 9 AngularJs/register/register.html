@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+  </head>
+<body>
+  <div class="containerr">
+    <form name="myform" ng-submit="registerForm()">
+     
+
+      
+
+      <div class="input-group">
+        <label>FullName.</label>
+        <input type="text" id="name" name="name" placeholder="FullNmae" ng-model="user.name" ng-required="true"  pattern="^[A-Za-z]+$">
+
+        <span class="error" ng-show="myform.name.$error.required && myform.name.$touched">Fill Out your FirstName.</span>
+        <span class="error" ng-show="myform.name.$error.pattern && myform.name.$touched">Name should only contain characters </span>
+        <span class="error" ng-show="myform.name.$valid "><i class="fas fa-check-circle"></i> </span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" name="email" id="email" placeholder="Email" ng-model="user.email" ng-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <span class="error" ng-show="myform.email.$error.required && myform.email.$touched">Fill Out your Email.</span>
+        <span class="error" ng-show="myform.email.$error.pattern && myform.email.$touched">Email should be in correct pattern</span>
+        <span class="error" ng-show="myform.email.$valid "><i class="fas fa-check-circle"></i></span>
+      </div>   
+
+      <div class="input-group">
+        <label>Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="8888888888" ng-model="user.phone" ng-required="true" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10">
+        <span class="error" ng-show="myform.phone.$error.required && myform.phone.$touched">Fill Out your Number correctly.</span>
+        <span class="error" ng-show="myform.phone.$error.pattern && myform.phone.$touched">Mobile.No should be <br> 10 digits</span>
+        <span class="error" ng-show="myform.phone.$valid"><i class="fas fa-check-circle"></i></span>
+      </div>   
+
+     
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter Password" ng-model="user.password" ng-required="true"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <span class="error" ng-show="myform.password.$error.required && myform.password.$touched">Enter your Password</span>
+        <span class="error" ng-show="myform.password.$error.pattern && myform.password.$touched">Password pattern incorrect</span>
+        <span class="error" ng-show="myform.password.$valid"><i class="fas fa-check-circle"></i></span>
+      </div>  
+
+
+      <div class="input-group">
+        <label>Address</label>
+        <input type="text" id="add" name="add" placeholder="Enter your Address" ng-model="user.add" ng-required="true">
+        <span class="error" ng-show="myform.add.$error.required && myform.add.$touched">Fill Out your Address correctly.</span>
+       <span class="error" ng-show="myform.add.$valid"><i class="fas fa-check-circle"></i></span>
+      </div>   
+
+
+    <button type="submit" ng-disabled="myform.$invalid">Submit</button>
+    
+    
+    </form>
+  </div>
+   
+
+  
+</body>
+</html>

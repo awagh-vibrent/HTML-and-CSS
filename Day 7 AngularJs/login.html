@@ -1,0 +1,14 @@
+<div>
+    <input type="text" name="firstname" placeholder="FirstName" ng-model="user.firstname" ng-required="true" ng-minlength="6" pattern="^[A-Za-z]+$">
+    <p class="error" ng-show="myform.firstname.$error.required && myform.firstname.$touched">Fill Out your FirstName.</p>
+    <p class="error" ng-show="myform.firstname.$error.pattern && myform.firstname.$touched">Name should only contain characters</p>
+
+    <p class="error" ng-show="myform.firstname.$error.minlength && myform.firstname.$touched">Minimum 6 chars required</p>
+  
+    <input type="text" name="lastname" placeholder="LastName" ng-model="user.lastname" ng-required="true" ng-minlength="3" pattern="^[A-Za-z]+$">
+    <p class="error" ng-show="myform.lastname.$error.required && myform.lastname.$touched">Fill Out your LastName.</p>
+    <p class="error" ng-show="myform.lastname.$error.pattern && myform.lastname.$touched">Name should only contain characters</p>
+
+    <p class="error" ng-show="myform.lastname.$error.minlength && myform.lastname.$touched">Minimum 3 chars required</p>
+  
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    </head>
+<body>
+  <div class="containerr">
+    <form name="loginForm" ng-submit="loginform()">
+     
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" name="email" id="email" placeholder="Email" ng-model="user.email" ng-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <span class="error" ng-show="myform.email.$error.required && myform.email.$touched">Fill Out your Email.</span>
+        <span class="error" ng-show="myform.email.$error.pattern && myform.email.$touched">Email should be in correct pattern</span>
+     
+       </div>   
+
+     
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter Password" ng-model="user.password" ng-required="true"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <span class="error" ng-show="myform.password.$error.required && myform.password.$touched">Enter your Password</span>
+        <span class="error" ng-show="myform.password.$error.pattern && myform.password.$touched">Password pattern incorrect</span>
+      
+        </div>  
+
+     
+    <button type="submit" ng-disabled="loginForm.$invalid">LogIn</button>
+    
+    
+   
+  </form>
+
+
+  
+  
+  </div>
+</body>
+</html>

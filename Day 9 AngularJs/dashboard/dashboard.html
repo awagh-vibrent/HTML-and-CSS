@@ -1,0 +1,45 @@
+
+<style>
+    .container{
+    display: grid;
+    place-items: center;
+    margin-top: 10rem;
+}
+
+
+.inner-container{
+    background-color: whitesmoke;
+    padding: 3rem 4rem;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+p{
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+</style>
+
+<div class="containerr">
+    <div class="inner-container">
+   
+
+
+<h1>Welcome {{userName}}</h1> 
+<p>Your Details:</p>
+<p>Name: {{userName}}</p>
+<p>Email: {{email}}</p>
+<p>Mobile: {{mobile}}</p>
+<p>Address: {{add}}</p>
+
+<button ng-click="logout()" class="btn btn-danger">Logout</button>
+
+</div>
+</div>

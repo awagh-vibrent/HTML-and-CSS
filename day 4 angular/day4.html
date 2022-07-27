@@ -1,0 +1,44 @@
+<html>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script src="angular.min.js"></script>
+<script src="day4.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+ <style>
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+    .valid{
+        display: grid;
+        place-items: center;
+        margin-top: 11rem;
+    }
+    .inner-valid{
+        padding: 2.5rem 5rem;
+        background-color: whitesmoke;
+    }
+    input{
+        padding: 0.5rem;
+    }
+
+ </style>
+
+
+    </head>
+<body ng-app="myApp">
+<div class="valid">
+    <div class="inner-valid">
+<h2> Input Field:</h2>
+<form name="form">
+<input name="myInput" ng-model="myInput" required my-directive>
+</form>
+
+<h2>{{form.myInput.$valid}}</h2>
+</div>
+</div>
+</body>
+</html>

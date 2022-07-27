@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Angular Form Validation</title>
+       
+        <script src="angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
+       
+        <script src="app.js"></script>
+    </head>
+    <body >
+        <div class="container" ng-app="myApp" ng-controller="Formcontroller">
+            <div class="textintro">
+                <h1>Form Validation</h1>
+                <p ng-show="msg">{{msg}}</p>
+            </div>
+
+            
+            <form name="myform" ng-submit="register()">
+               
+                <input type="text" id="fname" name="firstname" placeholder="FirstName" ng-model="user.firstname" ng-required="true" ng-minlength="6" pattern="^[A-Za-z]+$">
+                <p class="error" ng-show="myform.firstname.$error.required && myform.firstname.$touched">Fill Out your FirstName.</p>
+                <p class="error" ng-show="myform.firstname.$error.pattern && myform.firstname.$touched">Name should only contain characters</p>
+
+                <p class="error" ng-show="myform.firstname.$error.minlength && myform.firstname.$touched">Minimum 6 chars required</p>
+              
+                <input type="text" id="lname" name="lastname" placeholder="LastName" ng-model="user.lastname" ng-required="true" ng-minlength="3" pattern="^[A-Za-z]+$">
+                <p class="error" ng-show="myform.lastname.$error.required && myform.lastname.$touched">Fill Out your LastName.</p>
+                <p class="error" ng-show="myform.lastname.$error.pattern && myform.lastname.$touched">Name should only contain characters</p>
+
+                <p class="error" ng-show="myform.lastname.$error.minlength && myform.lastname.$touched">Minimum 3 chars required</p>
+              
+
+                <input type="email" id="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <p class="error" ng-show="myform.email.$error.required && myform.email.$touched">Fill Out your Email.</p>
+                <p class="error" ng-show="myform.email.$error.pattern && myform.email.$touched">Email should be in correct pattern</p>
+
+
+                <input type="tel" id="phone" name="phone" placeholder="8888888888" ng-model="user.phone" ng-required="true" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10">
+                <p class="error" ng-show="myform.phone.$error.required && myform.phone.$touched">Fill Out your Number correctly.</p>
+                <p class="error" ng-show="myform.phone.$error.pattern && myform.phone.$touched">Mobile.No should be <br> 10 digits</p>
+              
+
+
+                <input type="date" id="date" value="2022-07-14" min="2005-07-01" max="2022-07-14" name="date" id="date">
+               
+                
+
+                <button type="submit" class="btn" ng-disabled="myform.$invalid" >Submit</button>
+                    
+            </form>
+            
+        </div>
+
+        
+
+
+    </body>
+</html>

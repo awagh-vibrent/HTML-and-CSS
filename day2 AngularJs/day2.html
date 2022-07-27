@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <title>Angular First App</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+        <link data-require="bootstrap-css@2.3.2" 
+        data-semver="2.3.2" 
+        rel="stylesheet" 
+        href=
+"//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script data-require="angular-ui-bootstrap@0.3.0" 
+                data-semver="0.3.0" 
+                src=
+"http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js">
+      </script>
+       
+  
+        <link rel="stylesheet" href="hello-world.css">
+    </head>
+    <body ng-app>
+        <div class="cent" ng-controller ="myController as list">
+         <div class="inner-container">
+            <h3>Rows to display :</h3> 
+           
+
+                <select name="dropdown" ng-model="itemsPerPage">
+                    <option value=5 selected="selected">5</option>
+                    <option  value=10>10</option>
+                    <option  value=15>15</option>
+                    <option  value=20>20</option>
+                    <option value=25>25</option>
+                </select>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                    <th>
+                        Sr.no
+                    </th>
+                    <th>Object</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat ="employee in filteredItems | limitTo:itemsPerPage">
+                        <td>{{employee.No}}</td>
+                        <td>{{employee.Obj}}</td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+
+           
+            </div>
+
+
+           
+            <div data-pagination=""
+            data-num-pages="numOfPages()" 
+            data-current-page="curPage"
+            data-max-size="numPerPage" 
+            data-boundary-links="true" style="cursor: pointer;">
+     </div>
+
+        
+          
+      </div>
+
+
+
+      <script src="Scripts/angular.min.js"></script>
+        <script src="day2script.js"></script>
+       
+
+    </body>
+
+
+</html>
